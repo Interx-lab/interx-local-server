@@ -49,7 +49,9 @@ public class App {
     public static void main(String[] args) throws Exception {
       App client = new App("localhost", 50051);
       try {
-        client.send("Hello");
+        client.send("{company:\"AppleKingdom\", factory:\"Universal\"}, machine:\"125\", temperature:\"125\"");
+        client.send("{company:\"AppleKingdom\", factory:\"Tree\"}, machine:\"117\", temperature:\"50\"");
+        client.send("{company:\"SamsungNet\", factory:\"Electronics\"}, machine:\"99\", temperature:\"15\", speed:\"45 km/h\"");
       } finally {
         client.shutdown();
       }
